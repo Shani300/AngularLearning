@@ -1,0 +1,21 @@
+<h1>הכנס את פרטי היום:</h1>
+<section>
+<label for="date">הכנס את התאריך</label>
+<input type="date" id="date" [(ngModel)]="date"/>
+<label for="minTemp" >טמפרטורת המינימום:</label>
+<input type="number" id="minTemp" [(ngModel)]="minTemp"/>
+<label for="maxTemp">טמפרטורת המקסימום:</label>
+<input type="number" id="maxTemp" [(ngModel)]="maxTemp"/>
+<label for="Precipitation">כמות המשקעים:</label>
+<input type="number" id="Precipitation" [(ngModel)]="precipitionQuantity"/>
+
+@if(precipitionQuantity()>=1){
+<label for="hail">ירד ברד?</label>
+<input type="checkbox" id="hail" [(ngModel)]="hail"/>}
+
+@if(minTemp()<=4){
+<div>האם ירד שלג?</div>
+<input type="checkbox" [(ngModel)]="snow"/>
+}
+<button class="btn btn-success" (click)="enterDayWeatherDetailes()">להכנסת פרטי היום</button>
+</section>

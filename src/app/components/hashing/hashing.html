@@ -1,0 +1,8 @@
+<select [(ngModel)]="hash">
+    <option value="choose">בחר הצפנה</option>
+    <option value="atbath">א"ת ב"ש</option>
+    <option value="gim">גימטריה</option>
+</select>
+<input id="word" type="password" [(ngModel)]="word" placeholder="הכנס מילה">
+<div id="solution">{{solution()}}</div>
+

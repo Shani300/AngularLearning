@@ -1,0 +1,21 @@
+<table class="table table-striped table-bordered table-hover">
+    <tr>
+        <td>תאריך:</td>
+        <td>טמפרטורת מינימום:</td>
+        <td>טמפרטורת מקסימום:</td>
+        <td>כמות משקעים:</td>
+        <td></td>
+        <td></td>
+    </tr>
+@for(day of daysList(); track day.date)
+{
+    <tr>
+        <td>{{day.date}}</td>
+        <td>{{day.minTemp}}</td>
+        <td>{{day.maxTemp}}</td>
+        <td>{{day.precQuantity | number:'1.0-3'}}</td>
+        <td>{{weatherIcon(day.maxTemp,day.hail,day.snow)}}</td>
+
+    </tr>
+}
+</table>

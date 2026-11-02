@@ -1,0 +1,11 @@
+<p>calculator works!</p>
+<input type="number" [(ngModel)]="firstNum" placeholder="Enter the first number">
+<input type="number" [(ngModel)]="secondNum" placeholder="Enter the second number">
+<select [(ngModel)]="choose">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<div class="solution">{{solution()}}</div>
+<div class="red"> העיצוב באמצעות הבינה, הקוד כתוב על ידינו</div>
